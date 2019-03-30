@@ -253,12 +253,13 @@ class Mycarousel extends HTMLElement {
         //鼠标移出开始自动切换
         box.onmouseleave = function () {
             arr.style.display = "none";
-            timeId = setInterval(switchover, this.state.time);
+            timeId = setInterval(timeId);
 
             console.log(3)
         };
 
         //透明度渐变
+        //图片的方式还要改成重叠的，还没改
         function opacityFun() {
             let i = 0;
             i++;
